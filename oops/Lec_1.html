@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class user {
+            constructor(qualification){
+                this.q=qualification
+            }
+            display(){
+                // display two type method
+                // first method
+                console.log("qual is "+this.q)
+                // second method
+                // for(let i=0;i<this.q.length;i++){
+                //     console.log("qual is "+this.q[i])
+                // }
+            }
+
+        }
+
+        let arry=["10th","12th","bca","mca"];
+        const u1=new user(arry)
+        u1.display()
+
+    </script>
+
+</body>
+
+</html>

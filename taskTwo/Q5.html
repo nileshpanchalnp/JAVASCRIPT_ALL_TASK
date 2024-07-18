@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2><b>calculate total electricity bill</b></h2>
+
+    <script>
+        let uni = parseInt(prompt(" Enter a total electricity unit:"));
+            charge=parseFloat;
+
+        if (uni <= 50) {
+            charge = uni * 0.50;
+        }
+        else if (uni <= 150) {
+            charge = 50 * 0.50 + (uni - 50) * 0.75;
+        }
+        else if (uni <= 250) {
+            charge = 50 * 0.50 + 100 * 0.75 + (uni - 150) * 1.20;
+        }
+        else {
+            charge = (50 * 0.50) + (100 * 0.75) + (100 * 1.20) + (uni - 250) * 1.50;
+        }
+
+        // Add surcharge 20% 
+        charge = charge + (0.20 * charge);
+
+       document.write("Total electricity bill: Rs\n", charge);
+
+    </script>
+</body>
+
+</html>

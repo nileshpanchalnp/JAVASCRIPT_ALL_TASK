@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array program</title>
+</head>
+
+<body>
+    <h3>1. var data = [10,20,30,40,50,60,70]; <br>
+        WAP to Add all record in array using dynamic and print all records.</h3>
+    <hr>
+
+    <script>
+        let a = [10, 20, 30, 40, 50, 60];
+
+        document.write('<br>--a is ' + a[0]);
+        document.write('<br>--a is ' + a[1]);
+        document.write('<br>--a is ' + a[2]);
+        document.write('<br>--a is ' + a[3]);
+        document.write('<br>--a is ' + a[4]);
+        document.write('<br>--a is ' + a[5]);
+    </script>
+    <hr>
+
+
+    <h3>2. Var data=[10,20,30,40,50,60] <br>
+        WAP to print all record using forEach loop</h3>
+    <hr>
+    <script>
+        let data = [10, 20, 30, 40, 50, 60, 70];
+        data.forEach((i, index) => {
+            document.write('<br> ' + index + ' i is' + i);
+        })
+    </script>
+    <hr>
+
+    <h3>
+        3. Convert Above program Array to string. <br>
+        WAP to find that function and implements in program.</h3>
+    <hr>
+
+    <script>
+        let d = ["thar", "Rangrover", "Bmw", "mercedes", "swift"];
+        document.write("<br><b> string is </b> " + d.toString());
+    </script>
+    <hr>
+
+
+    <h3>4. WAP to IndexOf function, Shift and unshift function</h3>
+    <hr>
+
+    <script>
+        let dh = [10, 20, 30, 40, 50];
+        document.write("<br><b>Array </b> " + dh);
+
+        document.write("<br><b> index  is </b> " + dh.indexOf(40));
+
+        dh.shift();
+        for (let i = 0; i < dh.length; i++) {
+            document.write('<br>Array is array' + dh[i]);
+        }
+        dh.unshift(500);
+        for (let i = 0; i < dh.length; i++) {
+            document.write('<br><b>After  Add value is</b>' + dh[i]);
+        }
+    </script>
+
+    <h3>5. WAP to print all above record in descending order using function.</h3>
+    <hr>
+    <script>
+        let dv = [67, 55, 34, 77, 90];
+        document.write('Descending order' + dv.sort(function (a, b) {
+            return b - a;
+        }));
+
+    </script>
+
+</body>
+
+</html>

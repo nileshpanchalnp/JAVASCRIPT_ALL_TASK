@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+
+<body>
+    <script>
+        class parent {
+            constructor(name) {
+                this.n = name;
+            }
+            display() {
+                document.write('<br>Name is' + this.n);
+            }
+        }
+        class child extends parent {
+            constructor(rollno, name) {
+                super(name);  //call parent class constructor
+                this.r = rollno;
+                // this.name=name;
+            }
+            display() {
+                super.display();
+                document.write('<br>Rollno is' + this.r);
+            }
+        }
+        const obj = new child(101, "Test");
+        obj.display();
+    </script>
+</body>
+
+</html>

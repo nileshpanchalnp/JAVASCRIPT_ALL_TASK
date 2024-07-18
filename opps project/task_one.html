@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOps concept program list</title>
+</head>
+
+<body>
+    <script>
+        // qutions 1
+        const user = {
+            username: 'dhruval',
+            surname: 'gondaliya',
+            age: '22',
+            salary: 25000,
+            qualification: ['10th', '12th', 'b.com', 'm.com']
+        }
+        for (var x in user) {
+            if (x == 'qualification') {
+                user[x].forEach((i) => {
+                    document.write('<br>qualification is...' + i);
+
+                })
+            } else {
+                document.write('<br>' + x + "is..." + user[x]);
+            }
+        }
+    </script>
+    <hr>
+
+    <script>
+        //qutions 2
+        let obj = {
+            name: 'man',
+            surname: 'patel',
+            year: 2002,
+        }
+        let count = 0;
+
+        for (key in obj) {
+            count++;
+
+        }
+        document.write('<br>count no.......' + count);
+
+    </script>
+    
+
+    <script>
+        //qutions 3
+        // 1)this.
+        // 2)[]
+    </script>
+    
+
+    <script>
+        // qutions 4
+        let std = {
+            name: 'Hiren',
+            age: '20',
+            marks: [10, 20, 30]
+        }
+
+        function findAverage(marks) {
+            let sum = 0;
+            for (let i = 0; i < marks.length; i++) {
+                sum += marks[i];
+            }
+            return sum / marks.length;
+        }
+        function stdDetalis(std) {
+            document.write('<br>name...' + std.name);
+            document.write('<br>age...' + std.age);
+            document.write('<br>marks...' + std.marks);
+
+        }
+        stdDetalis(std)
+    </script>
+    <hr>
+    <script>
+        //qutions 5
+
+        document.getElementById("alphabetInput").addEventListener("keypress", function (event) {
+            let key = event.keyCode;
+            if ((key < 65 || key > 90) && (key < 97 || key > 122)) {
+                event.preventDefault();
+            }
+        })
+    </script>
+
+    <hr>
+    <script>
+        //qutions 6
+        function add(a = 20, b = 30) {
+            document.write('<br>addition is' + (a + b))
+        }
+        add();
+    </script>
+
+    <hr>
+
+    <script>
+        //qutions 7
+        function vehicle(type, tire) {
+            let obj = {
+                type: type,
+                tire: tire
+            };
+            return obj;
+        }
+        let car = vehicle('car', '4');
+        let bus = vehicle('bus', '6');
+        let truck = vehicle('truck', '10');
+        document.write('<br>car is', JSON.stringify(car));
+        document.write('<br>car is', JSON.stringify(bus));
+        document.write('<br>car is', JSON.stringify(truck));
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDF</title>
+</head>
+
+<body>
+
+    <form name="calc">
+
+        <b>1.WAP to calculate CALC Using Add, Sub, Mul, Div function</b> <br><br>
+
+
+        <input type="text" name="first" value="" style="width: 60px;height: 30px;">
+        <input type="text" name="sec" value="" style="width: 60px;height: 30px;"> =
+        <input type="text" name="thrd" value="" style="width: 60px;height: 30px;" placeholder="Ans"><br><br>
+
+        <input type="button" value="+" style="width: 50px;height: 30px;margin-top: 20px; font-size: 20px;"
+            onclick="add()">
+        <input type="button" value="-" style="width: 50px;height: 30px;margin-top: 20px; font-size: 20px;"
+            onclick="minus()">
+        <input type="button" value="*" style="width: 50px;height: 30px;margin-top: 20px; font-size: 20px;"
+            onclick="multy()">
+        <input type="button" value="/" style="width: 50px;height: 30px;margin-top: 20px; font-size: 20px;"
+            onclick="division()"><br><br><br>
+
+
+
+        <b>Q2: WAP to find Area using rectanlge, Triangle, circle functions.</b> <br><br>
+
+        <h2> Triangle:</h2>
+        <input type="text" name="height" value="" style="width: 60px;height: 30px;">
+        <input type="text" name="base" value="" style="width: 60px;height: 30px;"> =
+        <input type="text" name="total" value="" style="width: 60px;height: 30px;" placeholder="Ans"><br><br>
+
+        <input type="button" value="click" style="width: 55px;height: 30px;margin-top: 20px; font-size: 20px;"
+            onclick="con()">
+
+        <h2>rectanlge:</h2>
+
+        <input type="text" name="length" value="" style="width: 60px;height: 30px;">
+        <input type="text" name="width" value="" style="width: 60px;height: 30px;"> =
+        <input type="text" name="area" value="" style="width: 60px;height: 30px;" placeholder="Ans"><br><br>
+
+        <input type="button" value="click" style="width: 55px;height: 30px;margin-top: 20px; font-size: 20px;"
+            onclick="rect()">
+
+
+        <h2>circle:</h2>
+
+        <input type="text" name="radius" value="" style="width: 60px;height: 30px;"> =
+        <input type="text" name="solve" value="" style="width: 60px;height: 30px;" placeholder="Ans"><br><br>
+
+        <input type="button" value="click" style="width: 55px;height: 30px;margin-top: 20px; font-size: 20px;"
+            onclick="cir()">
+
+
+        <h2>3. WAP to find converter:</h2>
+
+        <h4>1. for meter to foot</h4>
+        <input type="text" name="meter" value="" style="width: 60px;height: 30px;"> =
+        <input type="text" name="feet" value="" style="width: 60px;height: 30px;" placeholder="Ans"><br><br>
+
+        <input type="button" value="click" style="width: 55px;height: 30px;margin-top: 20px; font-size: 20px;"
+            onclick="val() ">
+
+
+        <h4>2. for Celsius to Fahrenheit</h4>
+        <input type="text" name="fahren" value="" style="width: 60px;height: 30px;"> =
+        <input type="text" name="celsi" value="" style="width: 60px;height: 30px;" placeholder="Ans"><br><br>
+
+        <input type="button" value="click" style="width: 55px;height: 30px;margin-top: 20px; font-size: 20px;"
+            onclick="temp() ">
+
+
+        <h4>3. for Dollar to Rupeest</h4>
+        <input type="text" name="dollar" value="" style="width: 60px;height: 30px;" placeholder="Dollar"> =
+        <input type="text" name="rupee" value="" style="width: 60px;height: 30px;" placeholder="Ruppes"><br><br>
+
+        <input type="button" value="click" style="width: 55px;height: 30px;margin-top: 20px; font-size: 20px;"
+            onclick="united()">
+
+    </form>
+
+
+    <script>
+
+        function add() {
+            first = parseInt(calc.first.value);
+            sec = parseInt(calc.sec.value);
+            thrd = first + sec;
+            calc.thrd.value = thrd;
+        }
+
+        function minus() {
+            first = parseInt(calc.first.value);
+            sec = parseInt(calc.sec.value);
+            thrd = first - sec;
+            calc.thrd.value = thrd;
+        }
+
+        function multy() {
+            first = parseInt(calc.first.value);
+            sec = parseInt(calc.sec.value);
+            thrd = first * sec;
+            calc.thrd.value = thrd;
+        }
+
+        function division() {
+            first = parseInt(calc.first.value);
+            sec = parseInt(calc.sec.value);
+            thrd = first / sec;
+            calc.thrd.value = thrd;
+        }
+
+        // second
+
+        function con() {
+            height = parseInt(calc.height.value);
+            base = parseInt(calc.base.value);
+            total = 1 / 2 * height * base;
+            calc.total.value = total;
+        }
+
+        function rect() {
+            length = parseInt(calc.length.value);
+            width = parseInt(calc.width.value);
+            area = length * width;
+            calc.area.value = area;
+        }
+
+
+        function cir() {
+            radius = parseInt(calc.radius.value);
+            solve = 3.14 * radius * radius;
+            calc.solve.value = solve;
+        }
+
+        // third 
+
+        function val() {
+            meter = parseInt(calc.meter.value);
+            feet = meter * 3.28;
+            calc.feet.value = feet;
+        }
+
+
+        function temp() {
+            fahren = parseInt(calc.fahren.value);
+            celsi = 9 / 5 * fahren + 32;
+            calc.celsi.value = celsi;
+        }
+
+
+        function united() {
+            dollar = parseInt(calc.dollar.value);
+            rupee = dollar * 83;
+            calc.rupee.value = rupee;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

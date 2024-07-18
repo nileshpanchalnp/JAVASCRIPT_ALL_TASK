@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>alphabet, digit or special character.</h3>
+
+
+    <script>
+
+        let pr = prompt(" Enter alphabet, digit or special character");
+
+        if ((pr >= 'a' && pr <= 'z') || (pr >= 'A' && pr <= 'Z')) {
+            document.write("your value is alphabet:");
+        }
+
+        else if (pr >= '0' && pr <= '9') {
+            document.write("your value is  digit");
+        }
+
+        else {
+            document.write("your value is special character");
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+
+    <style>
+        .display {
+            width: 247px;
+            height: 420px;
+            background-color:black
+            ;
+            border-radius: 10px;
+        }
+        input{
+            border-radius: 5px;
+            font-size: 40px;
+            color: white;
+            background-color: rgba(118, 123, 128, 0.783);
+            border: none;
+        }
+
+        #disp {
+            width: 230px;
+            height: 40px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            border: 1px solid;
+            font-size: 28px;
+            border-radius: 25px;
+            color: white;
+            border: none;
+            text-align: center;
+            box-shadow: 10px;
+            background-color: rgba(128, 128, 128, 0.498);
+        }
+        #new{
+         background-color: #ffc300;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="display"><br>
+            <input type="text" name="disp" id="disp" style="height: 50px;"><br><br>
+
+            <button type="button" onclick="disp('')" ><b>c</b></button>&nbsp;
+            <button type="button" onclick="disp('%')"><b>%</b></button>&nbsp;
+            <button type="button" onclick="disp('')"><b>--</b></button>&nbsp;
+            <button type="button" onclick="disp('/')"><b>/</b></button><br><br>
+            <button type="button" onclick="disp('7')">7</button>&nbsp;
+            <button type="button" onclick="disp('8')">8</button>&nbsp;
+            <button type="button" onclick="disp('9')">9</button>&nbsp;
+            <button type="button" onclick="disp('*')"><b>*</b></button><br><br>
+            <button type="button" onclick="disp('4')">4</button>&nbsp;
+            <button type="button" onclick="disp('5')">5</button>&nbsp;
+            <button type="button" onclick="disp('6')">6</button>&nbsp;
+            <button type="button" onclick="disp('-')">-</button><br><br>
+            <button type="button" onclick="disp('1')">1</button>&nbsp;
+            <button type="button" onclick="disp('2')">2</button>&nbsp;
+            <button type="button" onclick="disp('3')">3</button>&nbsp;
+            <button type="button" onclick="disp('+')">+</button><br><br>
+            <button type="button" onclick="disp('00')">00</button>&nbsp;
+            <button type="button" onclick="disp('0')">0</button>&nbsp;
+            <button type="button" onclick="disp('.')">.</button>&nbsp;
+            <button type="button" onclick="ans('=')" id="new">=</button>&nbsp;
+
+        </div>
+    </center>
+
+    <script>
+        let txt = '';
+        function disp(val) {
+            if (val == '') {
+                document.getElementById("disp").value = '';
+                txt = '';
+            } else {
+                txt += val;
+                document.getElementById("disp").value = txt;
+            }
+        }
+
+        function ans() {
+            let answer=eval(txt)
+            document.getElementById("disp").value=answer;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

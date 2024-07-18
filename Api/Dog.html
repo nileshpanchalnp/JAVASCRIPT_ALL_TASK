@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+
+<body>
+
+    <!-- Wether Apl-->
+
+    <table border="1">
+        <thead align="center">
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="allData" align="center">
+
+
+        </tbody>
+    </table>
+
+    <script>
+        let tr = '';
+        fetch('https://fakestoreapi.com/products?sort=desc')
+            .then((i) => i.json())
+            .then(res => {
+                res.map((k) => {
+                    tr += `<tr>
+                        <td>${k.id}</td>
+                        <td><img src="${k.image}" height="60px" width="80px"</td>
+                        <td>${k.title}</td>
+                        <td>${k.category}</td>
+                        <td>${k.description}</td>
+                        <td>${k.price}</td>
+
+                    </tr>`
+                });
+                document.getElementById("allData").innerHTML = tr;
+            });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

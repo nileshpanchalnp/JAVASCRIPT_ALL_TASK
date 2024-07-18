@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+
+<body>
+
+    <h3>Local storage</h3>
+    <div id="demo"></div>
+
+    <script>
+
+        // Setitem add karav
+        let name = "dhruval";
+        let age = 22;
+        localStorage.setItem("name", name)
+        localStorage.setItem("age", 22)
+
+        // getitem display karva 
+        let d = localStorage.getItem("name")
+        document.getElementById("demo").innerHTML = "Name is" + d + "<br> age is" + age;
+
+        // item remove karva
+        // localStorage.removeItem('age')
+        // localStorage.clear()
+
+        // array
+        let distance = [10, 20, 30, 40, 50];
+        localStorage.setItem("distance", JSON.stringify(distance));
+
+        let a = localStorage.getItem("distance");
+        let b = JSON.parse(a);
+        console.log(b[2]);
+
+        // object
+
+
+        let student = {
+            id:101,
+            name:"Dhruval",
+            city:"Ahemdabad",
+            age:22
+        }
+
+        localStorage.setItem("studentid",JSON.stringify(student))
+        let g=JSON.parse(localStorage.getItem("studentid"))
+        
+
+        
+
+    </script>
+</body>
+
+</html>

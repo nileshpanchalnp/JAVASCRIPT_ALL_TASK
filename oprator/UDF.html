@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="demo">hii hello im a dhruval godaliya</div>
+    <div id="demo2"></div>
+    <script>
+
+        function add() {
+            let a = 10;
+            let b = 20;
+            document.wite('Addition is ' + (a + b));
+        }
+        add()
+
+        // tnrs
+
+        function cube() {
+            let a = 5;
+            return a * a * a;
+        }
+        document.getElementById("demo").innerHTML="cube is"+cube()
+
+        // TSRN
+        function area(r){
+            const pi=3.14
+            document.wite('<br> Area of circle is '+(pi*r*r));
+        }
+        area(20)
+
+        function subtraction(r,b,h){
+            return (r*2)-b+h;
+        }
+
+        document.getElementById("demo2").innerHTML="subtraction is "+subtraction(5,3,5);
+    </script>
+
+</body>
+
+</html>
